@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
-export const Wrapper = styled.nav`
+export const Wrapper = styled.menu`
   ${({ theme }) => css`
     display: flex;
     align-items: center;
@@ -37,6 +37,29 @@ export const MenuGroup = styled.div`
 
     > div {
       margin-left: ${theme.spacings.xxsmall};
+    }
+  `}
+`
+
+type MenuFullProps = {
+  isOpen: boolean
+}
+
+export const MenuFull = styled.nav<MenuFullProps>`
+  ${({ theme, isOpen }) => css`
+    background: ${theme.colors.white};
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    overflow: hidden;
+
+    opacity: ${isOpen ? 1 : 0};
+    pointer-events: ${isOpen ? 'all' : 'none'};
+
+    > svg {
     }
   `}
 `
