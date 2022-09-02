@@ -63,4 +63,19 @@ describe('<Button />', () => {
     fireEvent.click(screen.getByText(/buy now/i))
     expect(onClick).toHaveBeenCalled()
   })
+
+  it('should render button as a link', () => {
+    const { debug, container } = renderWithTheme(
+      <Button as="a" href="/link">
+        Buy now
+      </Button>
+    )
+
+    debug(container)
+
+    expect(screen.getByRole('link', { name: /buy now/i })).toHaveAttribute(
+      'href',
+      '/link'
+    )
+  })
 })
