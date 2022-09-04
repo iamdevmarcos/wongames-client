@@ -7,15 +7,13 @@ import { AddShoppingCart } from '@styled-icons/material-outlined/AddShoppingCart
 
 describe('<Button />', () => {
   it('should render a medium button by default', () => {
-    const { container } = renderWithTheme(<Button>Buy now</Button>)
+    renderWithTheme(<Button>Buy now</Button>)
 
     expect(screen.getByRole('button', { name: /buy now/i })).toHaveStyle({
       height: '4rem',
       'font-size': '1.4rem',
       padding: '0.8rem 3.2rem'
     })
-
-    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('should render a small button', () => {

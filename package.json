@@ -19,7 +19,7 @@
   "lint-staged": {
     "src/**/*": [
       "npm run lint --fix",
-      "yarn test --findRelatedTests --bail"
+      "npm run test --findRelatedTests --bail"
     ]
   },
   "dependencies": {
