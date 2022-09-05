@@ -7,6 +7,7 @@ export type HightlightProps = {
   backgroundImage: string
   buttonLabel: string
   buttonLink: string
+  floatImage?: string
 }
 
 const Highlight = ({
@@ -14,9 +15,12 @@ const Highlight = ({
   subtitle,
   backgroundImage,
   buttonLabel,
-  buttonLink
+  buttonLink,
+  floatImage
 }: HightlightProps) => (
   <S.Wrapper backgroundImage={backgroundImage}>
+    {!!floatImage && <S.FloatImage src={floatImage} alt={title} />}
+
     <S.Content>
       <S.Title>{title}</S.Title>
       <S.Subtitle>{subtitle}</S.Subtitle>
