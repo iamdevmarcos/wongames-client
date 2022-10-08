@@ -18,7 +18,7 @@ export default {
   },
   parameters: {
     backgrounds: {
-      default: 'dark'
+      default: 'won-dark'
     },
     onFav: { action: 'clicked' },
     ribbon: { type: 'string' }
