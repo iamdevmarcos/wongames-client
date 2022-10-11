@@ -1,4 +1,4 @@
-export default items = [
+export default [
   {
     title: 'Population Zero',
     developer: 'Rockstar Games',
