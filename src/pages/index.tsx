@@ -19,7 +19,7 @@ export async function getServerSideProps() {
       upcommingHighlight: highlightMock,
       upcommingMoreGames: gamesMock,
       freeGames: gamesMock,
-      freeHighligh: highlightMock
+      freeHighlight: highlightMock
     }
   }
 }
