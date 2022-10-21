@@ -54,6 +54,25 @@ describe('<Button />', () => {
     expect(screen.getByTestId('icon')).toBeInTheDocument()
   })
 
+  it('should render an minimal version', () => {
+    renderWithTheme(
+      <Button minimal icon={<AddShoppingCart data-testid="icon" />}>
+        Buy now
+      </Button>
+    )
+
+    expect(screen.getByRole('button', { name: /buy now/i })).toHaveStyle({
+      background: 'none',
+      color: '#f231a5'
+    })
+
+    expect(screen.getByRole('button', { name: /buy now/i })).toHaveStyleRule(
+      'background',
+      'none',
+      { modifier: ':hover' }
+    )
+  })
+
   it('should call onClick when user clicks', () => {
     const onClick = jest.fn()
     renderWithTheme(<Button onClick={onClick}>Buy now</Button>)
