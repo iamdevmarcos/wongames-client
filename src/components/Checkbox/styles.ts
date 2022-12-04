@@ -10,3 +10,5 @@ export const Label = styled.label<LabelProps>`
     color: ${theme.colors[labelColor!]};
   `}
 `
+
+export const Input = styled.input``
