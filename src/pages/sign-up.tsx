@@ -1,5 +1,5 @@
 import AuthTemplate from 'templates/Auth'
 
 export default function SignUp() {
-  return <AuthTemplate />
+  return <AuthTemplate title="Sign Up">children</AuthTemplate>
 }
