@@ -50,6 +50,10 @@ export const BannerContent = styled.div`
     grid-template-columns: 1fr;
     justify-content: space-between;
     height: 100vh;
+
+    ${HeadingStyles.Wrapper} {
+      font-weight: 600;
+    }
   `}
 `
 
