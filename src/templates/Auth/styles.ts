@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-import * as HeadingStyles from 'components/Logo/styles'
+import * as HeadingStyles from 'components/Heading/styles'
 import * as LogoStyles from 'components/Logo/styles'
 import media from 'styled-media-query'
 
