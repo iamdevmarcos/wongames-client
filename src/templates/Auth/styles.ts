@@ -54,6 +54,11 @@ export const BannerContent = styled.div`
     ${HeadingStyles.Wrapper} {
       font-weight: 600;
     }
+
+    a {
+      width: fit-content;
+      height: fit-content;
+    }
   `}
 `
 
