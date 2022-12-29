@@ -9,7 +9,7 @@
     "lint": "eslint src --max-warnings=0",
     "typecheck": "tsc --project tsconfig.json --noEmit",
     "test": "jest --maxWorkers=50% --silent",
-    "test:watch": "jest --watch --maxWorkers=25% --silent",
+    "test:watch": "jest --watch --maxWorkers=25%",
     "test:ci": "jest --runInBand",
     "generate": "plop --plopfile generators/plopfile.js",
     "storybook": "start-storybook -p 6006",
