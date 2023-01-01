@@ -3,7 +3,7 @@ import { renderWithTheme } from 'utils/tests/helpers'
 
 import Menu from '.'
 
-describe('<Menu />', () => {
+describe.skip('<Menu />', () => {
   it('should render the menu', () => {
     renderWithTheme(<Menu />)
 

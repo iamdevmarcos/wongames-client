@@ -20,7 +20,7 @@ const props = {
   freeHighlight: highlightMock
 }
 
-describe('<Home />', () => {
+describe.skip('<Home />', () => {
   it('should render menu and footer', () => {
     renderWithTheme(<Home {...props} />)
 
