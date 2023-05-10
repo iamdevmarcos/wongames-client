@@ -13,6 +13,13 @@ describe('<Game />', () => {
           price: ''
         }}
         description={''}
+        details={{
+          developer: '',
+          platforms: [],
+          releaseDate: '',
+          rating: 'BR0',
+          genres: []
+        }}
       />
     )
 

@@ -50,7 +50,15 @@ export async function getStaticProps() {
           label: 'Gallery Image 5'
         }
       ],
-      description: descriptionHTML
+      description: descriptionHTML,
+      details: {
+        developer: 'Nintendo',
+        releaseDate: '2020-12-10T23:00:00',
+        platforms: ['Windows', 'Mac'],
+        publisher: 'Nintendo',
+        rating: 'BR10',
+        genres: ['Action', 'Role-playing']
+      }
     }
   }
 }
