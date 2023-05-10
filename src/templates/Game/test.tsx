@@ -12,6 +12,7 @@ describe('<Game />', () => {
           description: '',
           price: ''
         }}
+        description={''}
       />
     )
 
