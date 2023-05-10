@@ -1,5 +1,7 @@
 import { useRouter } from 'next/router'
 import GameTemplate, { type GameTemplateProps } from 'templates/Game'
+import gamesMock from 'components/GameCardSlider/mock'
+import highlightMock from 'components/Highlight/mock'
 
 export default function Index(props: GameTemplateProps) {
   const router = useRouter()
@@ -58,7 +60,10 @@ export async function getStaticProps() {
         publisher: 'Nintendo',
         rating: 'BR10',
         genres: ['Action', 'Role-playing']
-      }
+      },
+      upcommingGames: gamesMock,
+      upcommingHighlight: highlightMock,
+      recommendedGames: gamesMock
     }
   }
 }
