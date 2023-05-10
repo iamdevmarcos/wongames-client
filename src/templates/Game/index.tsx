@@ -1,13 +1,21 @@
 import Base from 'templates/Base'
 import * as S from './styles'
+import GameInfo, { type GameInfoProps } from 'components/GameInfo'
 
-const GameTemplate = () => (
+export type GameTemplateProps = {
+  cover: string
+  gameInfo: GameInfoProps
+}
+
+const GameTemplate = ({ cover, gameInfo }: GameTemplateProps) => (
   <Base>
-    <S.Cover
-      src="https://punishedbacklog.com/wp-content/uploads/2017/08/Banner-Switch-Zelda-BreathOfTheWild-NewArt-1.jpg"
-      role="image"
-      aria-label="cover"
-    />
+    <S.Cover src={cover} role="image" aria-label="cover" />
+
+    <S.Main>
+      <S.SectionGameInfo>
+        <GameInfo {...gameInfo} />
+      </S.SectionGameInfo>
+    </S.Main>
   </Base>
 )
 
