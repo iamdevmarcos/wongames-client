@@ -20,8 +20,8 @@ describe('<Game />', () => {
           rating: 'BR0',
           genres: []
         }}
-        upcommingGames={[]}
-        upcommingHighlight={{
+        upcomingGames={[]}
+        upcomingHighlight={{
           title: '',
           subtitle: '',
           backgroundImage: '',
