@@ -6,6 +6,7 @@ import Heading from 'components/Heading'
 import GameCard, { GameCardProps } from 'components/GameCard'
 import { HighlightProps } from 'components/Highlight'
 import Showcase from 'components/Showcase'
+import { Grid } from 'components/Grid'
 
 export type WishlistProps = {
   games?: GameCardProps[]
@@ -24,9 +25,11 @@ const Wishlist = ({
         Wishlist
       </Heading>
 
-      {games?.map((game, index) => (
-        <GameCard key={`wishlist-${index}`} {...game} />
-      ))}
+      <Grid>
+        {games?.map((game, index) => (
+          <GameCard key={`wishlist-${index}`} {...game} />
+        ))}
+      </Grid>
     </Container>
 
     <Showcase
