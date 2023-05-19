@@ -1,6 +1,7 @@
 import CartList, { CartListProps } from 'components/CartList'
 import { Container } from 'components/Container'
 import { Divider } from 'components/Divider'
+import Empty from 'components/Empty'
 import { GameCardProps } from 'components/GameCard'
 import Heading from 'components/Heading'
 import { HighlightProps } from 'components/Highlight'
@@ -23,6 +24,7 @@ const CartTemplate = ({
   cards
 }: CartTemplateProps) => {
   const handlePayment = () => ({})
+  const isEmptyCart = items.length === 0
 
   return (
     <Base>
@@ -31,10 +33,18 @@ const CartTemplate = ({
           My cart
         </Heading>
 
-        <S.Content>
-          <CartList items={items} total={total} />
-          <PaymentOptions cards={cards} handlePayment={handlePayment} />
-        </S.Content>
+        {!isEmptyCart ? (
+          <S.Content>
+            <CartList items={items} total={total} />
+            <PaymentOptions cards={cards} handlePayment={handlePayment} />
+          </S.Content>
+        ) : (
+          <Empty
+            title="Your cart is empty"
+            description="Go back to the store and explore great games and offers"
+            hasLink
+          />
+        )}
 
         <Divider />
       </Container>
