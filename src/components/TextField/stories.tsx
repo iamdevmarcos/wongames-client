@@ -8,17 +8,16 @@ export default {
   component: TextField,
   args: {
     label: 'E-mail',
-    labelFor: 'Email',
+    name: 'email',
     icon: <Email />,
-    id: 'Email',
     initialValue: '',
-    placeholder: 'john.cage@gmail.com'
+    placeholder: 'john.cage@gmail.com',
+    disabled: false
   },
   argTypes: {
-    onInput: { action: 'changed' },
-    icon: { type: '' }
+    onInput: { action: 'changed' }
   }
-} as unknown as Meta
+} as Meta
 
 export const Default: Story<TextFieldProps> = (args) => (
   <div style={{ maxWidth: 300, padding: 15 }}>
