@@ -8,8 +8,10 @@ import {
 
 import * as S from './styles'
 
+export type ProfileUrl = '/profile/me' | '/profile/cards' | '/profile/orders'
+
 export type ProfileMenuProps = {
-  activeLink?: '/profile/me' | '/profile/cards' | '/profile/orders'
+  activeLink?: ProfileUrl
 }
 
 const ProfileMenu = ({ activeLink }: ProfileMenuProps) => (
