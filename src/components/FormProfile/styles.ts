@@ -1,7 +1,11 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
-export const Wrapper = styled.div``
+export const Wrapper = styled.div`
+  ${({ theme }) => css`
+    padding: ${theme.spacings.xxsmall};
+  `}
+`
 
 export const Form = styled.form`
   ${({ theme }) => css`

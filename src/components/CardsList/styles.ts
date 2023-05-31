@@ -4,7 +4,7 @@ export const Card = styled.div`
   ${({ theme }) => css`
     background: ${theme.colors.lightGray};
     color: ${theme.colors.black};
-    padding: 1.3rem ${theme.spacings.xsmall};
+    padding: 1.3rem ${theme.spacings.small};
     display: flex;
     align-items: center;
     &:not(:last-child) {
